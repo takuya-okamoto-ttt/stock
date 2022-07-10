@@ -55,7 +55,9 @@ try:
         'baidu': 'BIDU',
         'alibaba': 'BABA',
         'tencent': 'TCEHY',
-        'berkshire': 'BRK-B'
+        'berkshire': 'BRK-B',
+        'tesla': 'TSLA',
+        'nvidia': 'NVDA'
     }
     df = get_data(days, tickers)
     
@@ -63,7 +65,7 @@ try:
         '会社名を選択してください。',
         list(df.index),
         ['google', 'amazon', 'meta', 'apple', 'microsoft', 'netflix',
-         'baidu', 'alibaba', 'tencent', 'berkshire']
+         'baidu', 'alibaba', 'tencent', 'berkshire', 'tesla', 'nvidia']
     )
 
     if not companies:
