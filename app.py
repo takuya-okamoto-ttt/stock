@@ -42,7 +42,7 @@ try:
 
     ymin, ymax = st.sidebar.slider(
         '範囲を指定してください。',
-        0.0, 800.0, (0.0, 800.0)
+        0.0, 3000.0, (0.0, 3000.0)
     )
 
     tickers = {
@@ -57,7 +57,13 @@ try:
         'tencent': 'TCEHY',
         'berkshire': 'BRK-B',
         'tesla': 'TSLA',
-        'nvidia': 'NVDA'
+        'nvidia': 'NVDA',
+        'p&g': 'PG',
+        'cocacola': 'KO',
+        'pfizer': 'PFE',
+        'mcdonalds': 'MCD',
+        'accenture': 'ACN',
+        'nike': 'NKE'
     }
     df = get_data(days, tickers)
     
@@ -65,7 +71,8 @@ try:
         '会社名を選択してください。',
         list(df.index),
         ['google', 'amazon', 'meta', 'apple', 'microsoft', 'netflix',
-         'baidu', 'alibaba', 'tencent', 'berkshire', 'tesla', 'nvidia']
+         'baidu', 'alibaba', 'tencent', 'berkshire', 'tesla', 'nvidia',
+         'p&g', 'cocacola', 'pfizer', 'mcdonalds', 'accenture', 'nike']
     )
 
     if not companies:
